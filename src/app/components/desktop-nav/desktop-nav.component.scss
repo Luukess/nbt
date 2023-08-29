@@ -25,6 +25,7 @@ mat-list-item {
                 align-items: center;
                 justify-content: center;
                 color: white;
+                transition: all 0.3s ease-out;
             }
 
             .nav-link-name {
@@ -40,5 +41,22 @@ mat-list-item {
 
             }
         }
+    }
+}
+
+.nav-link-circle-current {
+    background-color: #991300 !important;
+}
+
+.disabled-link {
+    pointer-events: none;
+    cursor: not-allowed;
+
+    .nav-link-circle {
+        background-color: #dee2e7 !important;
+    }
+
+    .nav-link-name {
+        color: #dee2e7 !important;
     }
 }

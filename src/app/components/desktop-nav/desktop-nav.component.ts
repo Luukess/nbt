@@ -1,19 +1,33 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
+import { Navlinks } from 'src/app/interfaces/navlinks';
 
 @Component({
-  selector: 'app-desktop-nav',
-  templateUrl: './desktop-nav.component.html',
-  styleUrls: ['./desktop-nav.component.scss']
+    selector: 'app-desktop-nav',
+    templateUrl: './desktop-nav.component.html',
+    styleUrls: ['./desktop-nav.component.scss']
 })
 export class DesktopNavComponent implements OnInit {
 
-  constructor() { }
+    currentUrl: string = '/definition';
 
-  // navLinks: Array<string> = ['definition', 'choose products', 'exclude products', 'bonus products', 'products products', 'choose clients', 'exclude clients', 'clients limits', 'summary'];
+    constructor(private router: Router) {
+        this.handleCurrentUrl()
+    }
 
-  navLinks = [{ link: '/definition', linkName: 'definition' }, { link: '/choose-products', linkName: 'choose products' }, { link: '/exclude-products', linkName: 'exclude products' }, { link: '', linkName: 'bonus products' }, { link: '', linkName: 'products products' }, { link: '/choose-clients', linkName: 'choose clients' }, { link: '/exclude-clients', linkName: 'exclude clients' }, { link: '/clients-limits', linkName: 'clients limits' }, { link: 'summary', linkName: 'summary' },];
+    ngOnInit(): void {
+    };
 
-  ngOnInit(): void {
-  }
+    navLinks: Array<Navlinks> = [{ link: '/definition', linkName: 'definition' }, { link: '/choose-products', linkName: 'choose products' }, { link: '/exclude-products', linkName: 'exclude products' }, { link: '/bonus-products', linkName: 'bonus products' }, { link: '/products-limits', linkName: 'products limits' }, { link: '/choose-clients', linkName: 'choose clients' }, { link: '/exclude-clients', linkName: 'exclude clients' }, { link: '/clients-limits', linkName: 'clients limits' }, { link: '/summary', linkName: 'summary' },];
+
+    handleCurrentUrl() {
+        this.router.events.subscribe(
+            (event: any) => {
+                if (event instanceof NavigationEnd) {
+                    this.currentUrl = event.url
+                }
+            }
+        )
+    };
 
 }

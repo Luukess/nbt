@@ -1,12 +1,13 @@
 <mat-list id="desktop-nav-main-container" role="list">
     <mat-list-item *ngFor="let navLink of navLinks; let idx = index" role="listitem">
-        <a [routerLink]="navLink.link">
+        <a [routerLink]="navLink.link" (click)="handleCurrentUrl()"
+            [ngClass]="{'disabled-link': navLink.link === '/bonus-products' || navLink.link === '/products-limits'}">
             <div class="nav-link-wrapper">
-                <div class="nav-link-circle">{{idx + 1}}</div>
-                <div class="nav-link-name"><span>{{navLink.linkName}}</span></div>
+                <div [ngClass]="{'nav-link-circle-current': navLink.link === currentUrl}" class="nav-link-circle">{{idx
+                    + 1}}
+                </div>
+                <div class="nav-link-name"><span routerLinkActive="active-link">{{navLink.linkName}}</span></div>
             </div>
         </a>
     </mat-list-item>
 </mat-list>
-
-<!-- 991300 -->

@@ -8,6 +8,11 @@ mat-toolbar {
         align-items: center;
     }
 
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
     .nav-menu-button {
         display: block;
         margin-right: 10px;

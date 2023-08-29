@@ -1,0 +1,23 @@
+mat-toolbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .toolbar-nav-button-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-menu-button {
+        display: block;
+        margin-right: 10px;
+    }
+}
+
+@media(min-width: 992px) {
+    mat-toolbar {
+        .nav-menu-button {
+            display: none;
+        }
+    }
+}

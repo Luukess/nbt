@@ -1,2 +1,11 @@
-<app-nav></app-nav>
-<router-outlet></router-outlet>
+<div id="main-app">
+    <app-nav></app-nav>
+    <div id="main-app-wrapper">
+        <div id="main-app-desktop-nav">
+            <app-desktop-nav></app-desktop-nav>
+        </div>
+        <div id="main-app-content">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

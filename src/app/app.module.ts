@@ -14,6 +14,7 @@ import { ChooseClientsPageComponent } from './pages/choose-clients-page/choose-c
 import { ExcludeClientsPageComponent } from './pages/exclude-clients-page/exclude-clients-page.component';
 import { ClientsLimitsPageComponent } from './pages/clients-limits-page/clients-limits-page.component';
 import { SummaryPageComponent } from './pages/summary-page/summary-page.component';
+import { DesktopNavComponent } from './components/desktop-nav/desktop-nav.component';
 
 @NgModule({
     declarations: [
@@ -24,6 +25,7 @@ import { SummaryPageComponent } from './pages/summary-page/summary-page.componen
         ChooseClientsPageComponent,
         ClientsLimitsPageComponent,
         SummaryPageComponent,
+        DesktopNavComponent,
     ],
     imports: [
         BrowserModule,

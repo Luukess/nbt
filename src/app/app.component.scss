@@ -1,0 +1,28 @@
+#main-app {
+    #main-app-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+
+        #main-app-content {
+            width: calc(100% - 280px);
+        }
+
+        #main-app-desktop-nav {
+            width: 280px;
+            display: none;
+        }
+    }
+}
+
+@media(min-width: 992px) {
+    #main-app {
+        #main-app-wrapper {
+
+            #main-app-desktop-nav {
+                width: 280px;
+                display: block;
+            }
+        }
+    }
+}

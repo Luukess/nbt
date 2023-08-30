@@ -7,8 +7,16 @@
                 <div [ngClass]="{'nav-link-circle-current': navLink.link === currentUrl}" class="nav-link-circle">{{idx
                     + 1}}
                 </div>
-                <div class="nav-link-name"><span routerLinkActive="active-link">{{navLink.linkName}}</span></div>
+                <div class="nav-link-name">
+                    <span routerLinkActive="active-link">{{navLink.linkName}}</span>
+                </div>
             </div>
         </a>
+        <div class="nav-icon-container"
+            *ngIf=" navLink.link === '/bonus-products' || navLink.link === '/products-limits'">
+            <mat-icon class="info-icon-main" matTooltip="Lorem ipsum" matTooltipPosition="right">
+                info
+            </mat-icon>
+        </div>
     </mat-list-item>
 </mat-list>

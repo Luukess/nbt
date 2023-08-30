@@ -5,7 +5,8 @@
         justify-content: flex-start;
 
         #main-app-content {
-            width: calc(100% - 280px);
+            width: 100%;
+            padding: 8px 10px 0 10px;
         }
 
         #main-app-desktop-nav {

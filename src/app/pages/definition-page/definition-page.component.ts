@@ -20,18 +20,23 @@ export class DefinitionPageComponent implements OnInit {
       if (result.matches) {
         if (result.breakpoints[Breakpoints.XSmall]) {
           this.cols = this.gridByBreakpoint.xs;
+          this.rowHeight = this.gridRowHeight.xs;
         }
         if (result.breakpoints[Breakpoints.Small]) {
           this.cols = this.gridByBreakpoint.sm;
+          this.rowHeight = this.gridRowHeight.sm;
         }
         if (result.breakpoints[Breakpoints.Medium]) {
           this.cols = this.gridByBreakpoint.md;
+          this.rowHeight = this.gridRowHeight.md;
         }
         if (result.breakpoints[Breakpoints.Large]) {
           this.cols = this.gridByBreakpoint.lg;
+          this.rowHeight = this.gridRowHeight.lg;
         }
         if (result.breakpoints[Breakpoints.XLarge]) {
           this.cols = this.gridByBreakpoint.xl;
+          this.rowHeight = this.gridRowHeight.xl;
         }
       }
       console.log(this.cols)
@@ -42,6 +47,7 @@ export class DefinitionPageComponent implements OnInit {
   }
 
   cols: number = 0;
+  rowHeight: string = '1:1';
   gridByBreakpoint: BreakPoints = {
     xl: 2,
     lg: 2,
@@ -49,5 +55,13 @@ export class DefinitionPageComponent implements OnInit {
     sm: 2,
     xs: 1
   };
+
+  gridRowHeight = {
+    xl: '1:1',
+    lg: '2:5',
+    md: '2:5',
+    sm: '105vh',
+    xs: '120vh'
+  }
 
 }

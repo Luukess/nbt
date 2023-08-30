@@ -11,12 +11,10 @@ export class NavstateService {
 
   handleIsAccessState(newState: boolean) {
     this.isNavAccess.next(newState);
-  }
+  };
 
   currentIsAccessState() {
-    let currentValue;
-    this.isNavAccess.subscribe(status => currentValue = status);
-    return currentValue;
-  }
+    return this.isNavAccess;
+  };
 
 }

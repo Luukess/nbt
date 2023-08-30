@@ -44,6 +44,19 @@ mat-list-item {
     }
 }
 
+.is-active-nav {
+    pointer-events: none;
+    cursor: not-allowed;
+
+    .nav-link-circle {
+        background-color: #dee2e7 !important;
+    }
+
+    .nav-link-name {
+        color: #dee2e7 !important;
+    }
+}
+
 .nav-link-circle-current {
     background-color: #991300 !important;
 }

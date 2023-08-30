@@ -18,7 +18,6 @@ export class DescriptionformComponent implements OnInit {
       } else {
         this._navState.handleIsAccessState(false);
       }
-      console.log(this._navState.currentIsAccessState());
     });
   };
 

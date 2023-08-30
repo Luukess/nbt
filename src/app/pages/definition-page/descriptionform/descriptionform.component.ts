@@ -39,10 +39,9 @@ export class DescriptionformComponent implements OnInit {
 
   public definitionForm = this._formBuilder.group({
     marketingName: ['', [Validators.required, Validators.minLength(6)]],
-    technicalName: ['', [Validators.minLength(4), Validators.required]],
+    technicalName: ['', [, Validators.required, Validators.minLength(4)]],
     description: ['']
   });
-
 
   ngOnInit(): void {
     const formData: string | null = localStorage.getItem('lastDataForm');

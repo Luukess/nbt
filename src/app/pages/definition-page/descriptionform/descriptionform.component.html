@@ -16,6 +16,13 @@
                     <mat-icon class="info-icon-main" matTooltip="Lorem ipsum" matTooltipPosition="right">info</mat-icon>
                 </div>
             </div>
+            <p class="error-input-message"
+                *ngIf="definitionForm.get('marketingName')?.hasError('required') && definitionForm.get('marketingName')?.touched">
+                This field is required!
+            </p>
+            <p class="error-input-message"
+                *ngIf="definitionForm.get('marketingName')?.hasError('minlength') && definitionForm.get('marketingName')?.touched">
+                Min length 6 char</p>
             <div class="description-form-container-element">
                 <div class="description-form-element">
                     <mat-form-field appearance="outline">
@@ -27,6 +34,13 @@
                     <mat-icon class="info-icon-main" matTooltip="Lorem ipsum" matTooltipPosition="right">info</mat-icon>
                 </div>
             </div>
+            <p class="error-input-message"
+                *ngIf="definitionForm.get('technicalName')?.hasError('required') && definitionForm.get('marketingName')?.touched">
+                This field is required!
+            </p>
+            <p class="error-input-message"
+                *ngIf="definitionForm.get('technicalName')?.hasError('minlength') && definitionForm.get('marketingName')?.touched">
+                Min length 4 char</p>
             <div class="description-form-container-element">
                 <div class="description-form-element">
                     <mat-form-field appearance="outline">

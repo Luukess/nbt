@@ -5,13 +5,19 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatListModule } from '@angular/material/list';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 const materialComponents = [
   MatButtonModule,
   MatToolbarModule,
   MatIconModule,
   MatGridListModule,
-  MatListModule
+  MatListModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatTooltipModule
 ];
 
 @NgModule({

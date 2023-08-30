@@ -30,6 +30,19 @@ body {
     }
 }
 
+#form-description-body {
+
+    .mat-form-field-appearance-outline .mat-form-field-wrapper {
+        padding: 0 !important;
+        margin: 0;
+    }
+}
+
+.info-icon-main {
+    color: #991300;
+    font-size: 20px;
+}
+
 .required-label {
     font-size: 12px;
     color: #991300;

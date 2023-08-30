@@ -23,6 +23,18 @@ body {
     }
 }
 
+#definition-grid-main {
+    .mat-grid-tile-content {
+        display: block !important;
+        background-color: #EFF1F3;
+    }
+}
+
+.required-label {
+    font-size: 12px;
+    color: #991300;
+}
+
 .active-link {
     color: #991300;
 }

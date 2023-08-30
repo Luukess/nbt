@@ -15,6 +15,7 @@ import { ExcludeClientsPageComponent } from './pages/exclude-clients-page/exclud
 import { ClientsLimitsPageComponent } from './pages/clients-limits-page/clients-limits-page.component';
 import { SummaryPageComponent } from './pages/summary-page/summary-page.component';
 import { DesktopNavComponent } from './components/desktop-nav/desktop-nav.component';
+import { DescriptionformComponent } from './pages/definition-page/descriptionform/descriptionform.component';
 
 @NgModule({
     declarations: [
@@ -26,6 +27,7 @@ import { DesktopNavComponent } from './components/desktop-nav/desktop-nav.compon
         ClientsLimitsPageComponent,
         SummaryPageComponent,
         DesktopNavComponent,
+        DescriptionformComponent,
     ],
     imports: [
         BrowserModule,

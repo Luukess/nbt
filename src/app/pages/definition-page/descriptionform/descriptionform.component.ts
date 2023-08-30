@@ -12,26 +12,43 @@ export class DescriptionformComponent implements OnInit {
 
   constructor(private _formBuilder: FormBuilder, private _navState: NavstateService) {
     this.definitionForm.valueChanges.subscribe(status => {
-      localStorage.setItem('descriptionForm', JSON.stringify(status));
+      localStorage.setItem('lastDataForm', JSON.stringify(status));
       if (status.marketingName !== '' || status.technicalName !== '') {
         this._navState.handleIsAccessState(true);
       } else {
         this._navState.handleIsAccessState(false);
       }
     });
+
+    this.definitionForm.statusChanges.subscribe(status => {
+      if (status === 'VALID') {
+        const dataLocalstorage: string | null = localStorage.getItem('definitionDataArray')
+        if (dataLocalstorage !== null) {
+          const dataArray = JSON.parse(dataLocalstorage);
+          dataArray.push(this.definitionForm.value);
+          localStorage.setItem('definitionDataArray', JSON.stringify(dataArray));
+        } else {
+          const data = [];
+          data.push(this.definitionForm.value);
+          localStorage.setItem('definitionDataArray', JSON.stringify(data));
+        }
+      }
+    })
+
   };
 
   public definitionForm = this._formBuilder.group({
-    marketingName: ['', [Validators.required]],
-    technicalName: [''],
+    marketingName: ['', [Validators.required, Validators.minLength(6)]],
+    technicalName: ['', [Validators.minLength(4), Validators.required]],
     description: ['']
   });
 
 
   ngOnInit(): void {
-    const formData: string | null = localStorage.getItem('descriptionForm');
+    const formData: string | null = localStorage.getItem('lastDataForm');
     if (formData) {
-      this.definitionForm.setValue(JSON.parse(formData))
+      const data = JSON.parse(formData)
+      this.definitionForm.setValue({ marketingName: data.marketingName, technicalName: '', description: '' })
     };
   };
 

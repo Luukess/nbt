@@ -17,6 +17,7 @@ import { SummaryPageComponent } from './pages/summary-page/summary-page.componen
 import { DesktopNavComponent } from './components/desktop-nav/desktop-nav.component';
 import { DescriptionformComponent } from './pages/definition-page/descriptionform/descriptionform.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CatalogTutorialComponent } from './pages/definition-page/catalog-tutorial/catalog-tutorial.component';
 
 @NgModule({
     declarations: [
@@ -29,6 +30,7 @@ import { ReactiveFormsModule } from '@angular/forms';
         SummaryPageComponent,
         DesktopNavComponent,
         DescriptionformComponent,
+        CatalogTutorialComponent,
     ],
     imports: [
         BrowserModule,

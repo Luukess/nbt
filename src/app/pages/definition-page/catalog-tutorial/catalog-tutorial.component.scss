@@ -1,0 +1,21 @@
+#catalog-tutorial-container {
+    padding: 10px;
+
+    #catalog-header {
+        border-bottom: 4px solid white;
+        height: 48px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        p.header-name {
+            font-size: 16px;
+            margin: 0;
+        }
+
+    }
+
+    .catalog-tutorial-content {
+        margin-top: 10px;
+    }
+}

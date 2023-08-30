@@ -4,12 +4,12 @@
         <p class="header-p required-label">* is required</p>
     </div>
     <div id="form-description-body">
-        <form>
+        <form [formGroup]="definitionForm">
             <div class="description-form-container-element">
                 <div class="description-form-element">
                     <mat-form-field appearance="outline">
                         <mat-label>Marketing name</mat-label>
-                        <input matInput>
+                        <input matInput formControlName="marketingName">
                     </mat-form-field>
                 </div>
                 <div class="form-info-icon-container">
@@ -20,7 +20,7 @@
                 <div class="description-form-element">
                     <mat-form-field appearance="outline">
                         <mat-label>Technical name</mat-label>
-                        <input matInput>
+                        <input matInput formControlName="technicalName">
                     </mat-form-field>
                 </div>
                 <div class="form-info-icon-container">
@@ -31,7 +31,7 @@
                 <div class="description-form-element">
                     <mat-form-field appearance="outline">
                         <mat-label>Description</mat-label>
-                        <textarea matInput rows="6"></textarea>
+                        <textarea matInput rows="6" formControlName="description"></textarea>
                     </mat-form-field>
                 </div>
                 <div class="form-info-icon-container">

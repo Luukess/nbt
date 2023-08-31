@@ -48,7 +48,12 @@ import { SummarygridComponent } from './pages/summary-page/children-routs/summar
             { path: 'choose-clients', component: ChooseClientsPageComponent },
             { path: 'exclude-clients', component: ExcludeClientsPageComponent },
             { path: 'clients-limits', component: ClientsLimitsPageComponent },
-            { path: 'summary', component: SummaryPageComponent },
+            {
+                path: 'summary', component: SummaryPageComponent, children: [
+                    { path: 'grid', component: SummarygridComponent },
+                    { path: '**', redirectTo: 'grid' }
+                ]
+            },
             { path: '**', redirectTo: 'definition' }
         ]),
         ReactiveFormsModule

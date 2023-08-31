@@ -19,6 +19,7 @@ import { DescriptionformComponent } from './pages/definition-page/descriptionfor
 import { ReactiveFormsModule } from '@angular/forms';
 import { CatalogTutorialComponent } from './pages/definition-page/catalog-tutorial/catalog-tutorial.component';
 import { ConditionsformComponent } from './pages/definition-page/conditionsform/conditionsform.component';
+import { SummarygridComponent } from './pages/summary-page/children-routs/summarygrid/summarygrid.component';
 
 @NgModule({
     declarations: [
@@ -33,6 +34,7 @@ import { ConditionsformComponent } from './pages/definition-page/conditionsform/
         DescriptionformComponent,
         CatalogTutorialComponent,
         ConditionsformComponent,
+        SummarygridComponent,
     ],
     imports: [
         BrowserModule,

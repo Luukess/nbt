@@ -4,14 +4,14 @@
         <p class="header-p required-label">* is required</p>
     </div>
     <div id="conditions-form-body">
-        <form>
+        <form [formGroup]="conditionsForm">
             <div class="conditions-form-container-element">
                 <div class="conditions-form-element">
                     <mat-form-field appearance="outline">
-                        <mat-label>Select</mat-label>
-                        <mat-select>
-                            <mat-option value="one">First option</mat-option>
-                            <mat-option value="two">Second option</mat-option>
+                        <mat-label>Portal</mat-label>
+                        <mat-select formControlName="portal">
+                            <mat-option value="portal one">First portal</mat-option>
+                            <mat-option value="portal two">Second portal</mat-option>
                         </mat-select>
                     </mat-form-field>
                 </div>
@@ -22,10 +22,10 @@
             <div class="conditions-form-container-element">
                 <div class="conditions-form-element">
                     <mat-form-field appearance="outline">
-                        <mat-label>Select</mat-label>
-                        <mat-select>
-                            <mat-option value="one">First option</mat-option>
-                            <mat-option value="two">Second option</mat-option>
+                        <mat-label>Type</mat-label>
+                        <mat-select formControlName="type">
+                            <mat-option value="type one">First type</mat-option>
+                            <mat-option value="type two">Second type</mat-option>
                         </mat-select>
                     </mat-form-field>
                 </div>
@@ -36,10 +36,10 @@
             <div class="conditions-form-container-element">
                 <div class="conditions-form-element">
                     <mat-form-field appearance="outline">
-                        <mat-label>Select</mat-label>
-                        <mat-select disabled>
-                            <mat-option value="one">First option</mat-option>
-                            <mat-option value="two">Second option</mat-option>
+                        <mat-label>Benefit amount</mat-label>
+                        <mat-select [disabled]="disabledSelectState" formControlName="benefitAmount">
+                            <mat-option value="one benefit">First benefit</mat-option>
+                            <mat-option value="two benefit">Second benefit</mat-option>
                         </mat-select>
                     </mat-form-field>
                 </div>
@@ -52,7 +52,7 @@
                     <div class="conditions-data-picker">
                         <mat-form-field appearance="outline">
                             <mat-label>Start date</mat-label>
-                            <input matInput [matDatepicker]="startDatePicker">
+                            <input matInput [matDatepicker]="startDatePicker" formControlName="startDate">
                             <mat-datepicker-toggle matSuffix [for]="startDatePicker">
                             </mat-datepicker-toggle>
                             <mat-datepicker #startDatePicker></mat-datepicker>
@@ -61,7 +61,7 @@
                     <div class="conditions-data-picker">
                         <mat-form-field appearance="outline">
                             <mat-label>End date</mat-label>
-                            <input matInput [matDatepicker]="endDatePicker">
+                            <input matInput [matDatepicker]="endDatePicker" formControlName="endDate">
                             <mat-datepicker-toggle matSuffix [for]="endDatePicker">
                             </mat-datepicker-toggle>
                             <mat-datepicker #endDatePicker></mat-datepicker>
@@ -73,7 +73,7 @@
                 </div>
             </div>
             <div class="conditions-form-container-element">
-                <mat-radio-group id="radio-button-container">
+                <mat-radio-group id="radio-button-container" formControlName="bussinessRadio">
                     <div class="radio-form-element">
                         <mat-radio-button value="Bussiness conditions">Bussiness conditions</mat-radio-button>
                     </div>
@@ -88,10 +88,10 @@
             <div class="conditions-form-container-element">
                 <div id="checkbox-form-container">
                     <div class="checkbox-form-element">
-                        <mat-checkbox>Connect with otherpromotions</mat-checkbox>
+                        <mat-checkbox formControlName="connectPromotions">Connect with otherpromotions</mat-checkbox>
                     </div>
                     <div class="checkbox-form-element">
-                        <mat-checkbox>Back promotion</mat-checkbox>
+                        <mat-checkbox formControlName="backPromotion">Back promotion</mat-checkbox>
                     </div>
                 </div>
                 <div class="form-info-icon-container">

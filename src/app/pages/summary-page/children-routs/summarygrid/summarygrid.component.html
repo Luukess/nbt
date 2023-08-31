@@ -21,7 +21,8 @@
                     <button mat-icon-button color="primary" aria-label="Example icon button with a home icon">
                         <mat-icon>edit</mat-icon>
                     </button>
-                    <button mat-icon-button color="error" aria-label="Example icon button with a home icon">
+                    <button (click)="openRemoveDialog(idx)" mat-icon-button color="error"
+                        aria-label="Example icon button with a home icon">
                         <mat-icon>clear</mat-icon>
                     </button>
                 </div>

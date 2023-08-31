@@ -14,6 +14,7 @@ import { MatNativeDateModule, MatRippleModule } from '@angular/material/core';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatTableModule } from '@angular/material/table';
+import { MatDialogModule } from '@angular/material/dialog';
 
 const materialComponents = [
   MatButtonModule,
@@ -31,7 +32,8 @@ const materialComponents = [
   CommonModule,
   MatRadioModule,
   MatCheckboxModule,
-  MatTableModule
+  MatTableModule,
+  MatDialogModule
 ];
 
 @NgModule({

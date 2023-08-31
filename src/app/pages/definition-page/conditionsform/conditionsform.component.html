@@ -19,6 +19,10 @@
                     <mat-icon class="info-icon-main" matTooltip="Lorem ipsum" matTooltipPosition="left">info</mat-icon>
                 </div>
             </div>
+            <p class="error-input-message"
+                *ngIf="conditionsForm.get('portal')?.hasError('required') && conditionsForm.get('portal')?.touched">
+                This field is required!
+            </p>
             <div class="conditions-form-container-element">
                 <div class="conditions-form-element">
                     <mat-form-field appearance="outline">
@@ -33,6 +37,10 @@
                     <mat-icon class="info-icon-main" matTooltip="Lorem ipsum" matTooltipPosition="left">info</mat-icon>
                 </div>
             </div>
+            <p class="error-input-message"
+                *ngIf="conditionsForm.get('type')?.hasError('required') && conditionsForm.get('type')?.touched">
+                This field is required!
+            </p>
             <div class="conditions-form-container-element">
                 <div class="conditions-form-element">
                     <mat-form-field appearance="outline">
@@ -72,6 +80,10 @@
                     <mat-icon class="info-icon-main" matTooltip="Lorem ipsum" matTooltipPosition="left">info</mat-icon>
                 </div>
             </div>
+            <p class="error-input-message"
+                *ngIf="conditionsForm.get('startDate')?.hasError('required') && conditionsForm.get('startDate')?.touched">
+                This field is required!
+            </p>
             <div class="conditions-form-container-element">
                 <mat-radio-group id="radio-button-container" formControlName="bussinessRadio">
                     <div class="radio-form-element">

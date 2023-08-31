@@ -10,7 +10,6 @@ export class ConditionsformComponent implements OnInit {
 
   constructor(private _formBuilder: FormBuilder) {
     this.conditionsForm.valueChanges.subscribe(data => {
-      console.log(data)
       if (data.portal !== '' || data.portal !== null) {
         this.disabledSelectState = false;
       } else {

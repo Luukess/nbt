@@ -51,7 +51,6 @@ import { SummarygridComponent } from './pages/summary-page/children-routs/summar
             {
                 path: 'summary', component: SummaryPageComponent, children: [
                     { path: 'grid', component: SummarygridComponent },
-                    { path: '**', redirectTo: 'grid' }
                 ]
             },
             { path: '**', redirectTo: 'definition' }

@@ -1,0 +1,16 @@
+#summary-main-container {
+    padding: 10px 10px 0 10px;
+    width: 100%;
+    min-height: calc(100vh - 74px);
+
+    .summary-button-main-container {
+        width: 100%;
+        padding: 10px 0;
+
+        #open-grid-button {
+            text-transform: uppercase;
+            background-color: #991300;
+            color: white;
+        }
+    }
+}

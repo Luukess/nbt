@@ -1,0 +1,19 @@
+table {
+    width: 100%;
+}
+
+.mat-header-cell {
+    background-color: #991300;
+    color: white;
+}
+
+#other-background {
+    background-color: black;
+}
+
+.mat-cell,
+.mat-header-cell {
+    font-size: 14px;
+    padding: 0 10px;
+    border-right: 1px solid #e0e0e0;
+}

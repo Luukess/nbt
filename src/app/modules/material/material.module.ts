@@ -8,6 +8,11 @@ import { MatListModule } from '@angular/material/list';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatSelectModule } from '@angular/material/select';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule, MatRippleModule } from '@angular/material/core';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 const materialComponents = [
   MatButtonModule,
@@ -17,7 +22,14 @@ const materialComponents = [
   MatListModule,
   MatFormFieldModule,
   MatInputModule,
-  MatTooltipModule
+  MatTooltipModule,
+  MatSelectModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
+  MatRippleModule,
+  CommonModule,
+  MatRadioModule,
+  MatCheckboxModule
 ];
 
 @NgModule({

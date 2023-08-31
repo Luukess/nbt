@@ -1,0 +1,103 @@
+<div id="conditions-main-container">
+    <div id="conditions-header">
+        <p class="header-p name-of-header">Conditions</p>
+        <p class="header-p required-label">* is required</p>
+    </div>
+    <div id="conditions-form-body">
+        <form>
+            <div class="conditions-form-container-element">
+                <div class="conditions-form-element">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Select</mat-label>
+                        <mat-select>
+                            <mat-option value="one">First option</mat-option>
+                            <mat-option value="two">Second option</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="form-info-icon-container">
+                    <mat-icon class="info-icon-main" matTooltip="Lorem ipsum" matTooltipPosition="left">info</mat-icon>
+                </div>
+            </div>
+            <div class="conditions-form-container-element">
+                <div class="conditions-form-element">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Select</mat-label>
+                        <mat-select>
+                            <mat-option value="one">First option</mat-option>
+                            <mat-option value="two">Second option</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="form-info-icon-container">
+                    <mat-icon class="info-icon-main" matTooltip="Lorem ipsum" matTooltipPosition="left">info</mat-icon>
+                </div>
+            </div>
+            <div class="conditions-form-container-element">
+                <div class="conditions-form-element">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Select</mat-label>
+                        <mat-select disabled>
+                            <mat-option value="one">First option</mat-option>
+                            <mat-option value="two">Second option</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="form-info-icon-container">
+                    <mat-icon class="info-icon-main" matTooltip="Lorem ipsum" matTooltipPosition="left">info</mat-icon>
+                </div>
+            </div>
+            <div class="conditions-form-container-element">
+                <div class="conditions-form-element-date-pickers">
+                    <div class="conditions-data-picker">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Start date</mat-label>
+                            <input matInput [matDatepicker]="startDatePicker">
+                            <mat-datepicker-toggle matSuffix [for]="startDatePicker">
+                            </mat-datepicker-toggle>
+                            <mat-datepicker #startDatePicker></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+                    <div class="conditions-data-picker">
+                        <mat-form-field appearance="outline">
+                            <mat-label>End date</mat-label>
+                            <input matInput [matDatepicker]="endDatePicker">
+                            <mat-datepicker-toggle matSuffix [for]="endDatePicker">
+                            </mat-datepicker-toggle>
+                            <mat-datepicker #endDatePicker></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="form-info-icon-container">
+                    <mat-icon class="info-icon-main" matTooltip="Lorem ipsum" matTooltipPosition="left">info</mat-icon>
+                </div>
+            </div>
+            <div class="conditions-form-container-element">
+                <mat-radio-group id="radio-button-container">
+                    <div class="radio-form-element">
+                        <mat-radio-button value="Bussiness conditions">Bussiness conditions</mat-radio-button>
+                    </div>
+                    <div class="radio-form-element">
+                        <mat-radio-button value="Base price 100%">Base price 100%</mat-radio-button>
+                    </div>
+                </mat-radio-group>
+                <div class="form-info-icon-container">
+                    <mat-icon class="info-icon-main" matTooltip="Lorem ipsum" matTooltipPosition="left">info</mat-icon>
+                </div>
+            </div>
+            <div class="conditions-form-container-element">
+                <div id="checkbox-form-container">
+                    <div class="checkbox-form-element">
+                        <mat-checkbox>Connect with otherpromotions</mat-checkbox>
+                    </div>
+                    <div class="checkbox-form-element">
+                        <mat-checkbox>Back promotion</mat-checkbox>
+                    </div>
+                </div>
+                <div class="form-info-icon-container">
+                    <mat-icon class="info-icon-main" matTooltip="Lorem ipsum" matTooltipPosition="left">info</mat-icon>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

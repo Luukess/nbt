@@ -30,7 +30,9 @@ body {
     }
 }
 
-#form-description-body {
+#form-description-body,
+.conditions-form-element,
+.conditions-data-picker {
 
     .mat-form-field-appearance-outline .mat-form-field-wrapper {
         padding: 0 !important;

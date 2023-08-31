@@ -18,6 +18,7 @@ import { DesktopNavComponent } from './components/desktop-nav/desktop-nav.compon
 import { DescriptionformComponent } from './pages/definition-page/descriptionform/descriptionform.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CatalogTutorialComponent } from './pages/definition-page/catalog-tutorial/catalog-tutorial.component';
+import { ConditionsformComponent } from './pages/definition-page/conditionsform/conditionsform.component';
 
 @NgModule({
     declarations: [
@@ -31,6 +32,7 @@ import { CatalogTutorialComponent } from './pages/definition-page/catalog-tutori
         DesktopNavComponent,
         DescriptionformComponent,
         CatalogTutorialComponent,
+        ConditionsformComponent,
     ],
     imports: [
         BrowserModule,

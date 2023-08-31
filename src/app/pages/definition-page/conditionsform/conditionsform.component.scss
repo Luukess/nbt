@@ -1,0 +1,101 @@
+#conditions-main-container {
+    width: 100%;
+    padding: 0 10px;
+
+    #conditions-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 48px;
+        border-bottom: 4px solid white;
+
+        p.header-p {
+            margin: 0;
+        }
+
+        .name-of-header {
+            font-size: 16px;
+        }
+    }
+
+    #conditions-form-body {
+        margin-top: 10px;
+
+        .conditions-form-container-element {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: space-between;
+            padding: 14px 10px;
+
+            .conditions-form-element {
+                width: 100%;
+                background-color: white;
+
+                mat-form-field {
+                    width: 100%;
+                }
+            }
+
+            .conditions-form-element-date-pickers {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+
+                .conditions-data-picker {
+                    width: 100%;
+                    padding: 10px 0;
+                }
+
+                mat-form-field {
+                    width: 100%;
+                    background-color: white;
+
+                }
+            }
+
+            .form-info-icon-container {
+                padding: 5px;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            #radio-button-container {
+                display: flex;
+                justify-content: flex-start;
+                flex-direction: column;
+
+                .radio-form-element {
+                    padding: 10px 5px;
+                }
+            }
+
+            #checkbox-form-container {
+                display: flex;
+                flex-direction: column;
+
+                .checkbox-form-element {
+                    padding: 10px 5px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .conditions-data-picker {
+        width: 40% !important;
+        padding: 10px 0;
+    }
+}
+
+@media (min-width: 992px) {
+    #radio-button-container {
+        flex-direction: row !important;
+    }
+}

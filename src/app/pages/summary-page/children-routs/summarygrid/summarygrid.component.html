@@ -18,7 +18,8 @@
             <th id="other-background" mat-header-cell *matHeaderCellDef> Actions </th>
             <td mat-cell *matCellDef="let element; let idx = index">
                 <div id="icons-button-container">
-                    <button mat-icon-button color="primary" aria-label="Example icon button with a home icon">
+                    <button (click)="openEditDialog(idx)" mat-icon-button color="primary"
+                        aria-label="Example icon button with a home icon">
                         <mat-icon>edit</mat-icon>
                     </button>
                     <button (click)="openRemoveDialog(idx)" mat-icon-button color="error"

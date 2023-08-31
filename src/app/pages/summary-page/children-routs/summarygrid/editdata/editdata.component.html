@@ -1,0 +1,23 @@
+<div class="dialog-update-name">
+    <h2 mat-dialog-title>Action</h2>
+    <form [formGroup]="newNameForm" (submit)="handleSave()">
+        <div id="input-update-container" mat-dialog-content>
+            <p>Edit name of promotion:</p>
+            <mat-form-field appearance="outline">
+                <mat-label>Promotion name</mat-label>
+                <input formControlName="marketingName" matInput placeholder="New name">
+            </mat-form-field>
+        </div>
+        <p class="error-input-message"
+            *ngIf="newNameForm.get('marketingName')?.hasError('required') && newNameForm.get('marketingName')?.invalid">
+            This field is required</p>
+        <p class="error-input-message"
+            *ngIf="newNameForm.get('marketingName')?.hasError('minlength') && newNameForm.get('marketingName')?.invalid">
+            Min 3 chars</p>
+        <div mat-dialog-actions>
+            <button type="button" mat-raised-button mat-dialog-close mat-dialog-close="false">Cancel</button>
+            <button id="save-button" type="submit" [disabled]="isDisabled" mat-raised-button mat-dialog-close
+                mat-dialog-close="true">Save</button>
+        </div>
+    </form>
+</div>

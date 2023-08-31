@@ -10,6 +10,9 @@ export class AppComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    localStorage.setItem('definitionDataArray', JSON.stringify([]));
+    const isDataExist: string | null = localStorage.getItem('definitionDataArray');
+    if (isDataExist === null) {
+      localStorage.setItem('definitionDataArray', JSON.stringify([]));
+    }
   }
 }

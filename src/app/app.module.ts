@@ -16,11 +16,12 @@ import { ClientsLimitsPageComponent } from './pages/clients-limits-page/clients-
 import { SummaryPageComponent } from './pages/summary-page/summary-page.component';
 import { DesktopNavComponent } from './components/desktop-nav/desktop-nav.component';
 import { DescriptionformComponent } from './pages/definition-page/descriptionform/descriptionform.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CatalogTutorialComponent } from './pages/definition-page/catalog-tutorial/catalog-tutorial.component';
 import { ConditionsformComponent } from './pages/definition-page/conditionsform/conditionsform.component';
 import { SummarygridComponent } from './pages/summary-page/children-routs/summarygrid/summarygrid.component';
 import { RemoveConfirmComponent } from './pages/summary-page/children-routs/summarygrid/remove-confirm/remove-confirm.component';
+import { EditdataComponent } from './pages/summary-page/children-routs/summarygrid/editdata/editdata.component';
 
 @NgModule({
     declarations: [
@@ -37,6 +38,7 @@ import { RemoveConfirmComponent } from './pages/summary-page/children-routs/summ
         ConditionsformComponent,
         SummarygridComponent,
         RemoveConfirmComponent,
+        EditdataComponent,
     ],
     imports: [
         BrowserModule,
@@ -57,7 +59,8 @@ import { RemoveConfirmComponent } from './pages/summary-page/children-routs/summ
             },
             { path: '**', redirectTo: 'definition' }
         ]),
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        FormsModule
     ],
     providers: [],
     bootstrap: [AppComponent]

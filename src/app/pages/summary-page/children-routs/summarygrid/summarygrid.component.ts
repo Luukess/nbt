@@ -22,8 +22,6 @@ export class SummarygridComponent implements OnInit {
   private handleRemovePromotion(index: number) {
     const allData: DescriptionFormObject[] = this.dataFromStorage;
     const modifiedArray = allData.splice(index, 1);
-    console.log(modifiedArray);
-    console.log(allData);
     localStorage.setItem('definitionDataArray', JSON.stringify(allData));
     this.dataFromStorage = [...allData];
   };

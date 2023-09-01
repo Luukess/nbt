@@ -1,6 +1,7 @@
 <mat-toolbar>
     <div class="toolbar-nav-button-container">
-        <button mat-icon-button class="nav-menu-button" aria-label="Example icon-button with menu icon">
+        <button (click)="handleToggle()" mat-icon-button class="nav-menu-button"
+            aria-label="Example icon-button with menu icon">
             <mat-icon>menu</mat-icon>
         </button>
         <a routerLink="/definition"><span>Task App</span></a>
@@ -9,3 +10,18 @@
         but
     </div> -->
 </mat-toolbar>
+
+<div *ngIf="isVisibleMobileNav">
+    <div id="nav-mobile-container">
+        <div class="nav-mobile-overlayer">
+            <div id="nav-mobile">
+                <div class="header-mobile-nav">
+                    <button (click)="handleToggle()" mat-icon-button>
+                        <mat-icon>close</mat-icon>
+                    </button>
+                </div>
+                <app-desktop-nav></app-desktop-nav>
+            </div>
+        </div>
+    </div>
+</div>

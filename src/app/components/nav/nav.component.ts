@@ -9,6 +9,16 @@ export class NavComponent implements OnInit {
 
   constructor() { }
 
+  isVisibleMobileNav: boolean = false;
+
+  handleToggle() {
+    if (this.isVisibleMobileNav) {
+      this.isVisibleMobileNav = false;
+    } else {
+      this.isVisibleMobileNav = true;
+    }
+  }
+
   ngOnInit(): void {
   }
 
